@@ -3,8 +3,6 @@
 export DISPLAY=:99
 Xvfb :99 -shmem -screen 0 1366x768x16 &
 
-x11vnc -passwd secret -display :99 -N -forever &
-
 java -Djava.security.egd=file:/dev/random \
 -jar /opt/selenium-server.jar \
 -role node \
